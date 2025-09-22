@@ -1,0 +1,159 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 30px;
+  background: linear-gradient(135deg, #007A33, #FCD116, #D52B1E); /* Verde, amarillo y rojo Bolivia */
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Contenedor principal */
+.padre {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #111; /* Fondo oscuro para contraste */
+  padding: 35px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  color: #f5f5f5;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #FCD116; /* Amarillo bandera */
+  text-shadow: 0 0 10px #FCD116AA;
+  user-select: none;
+}
+
+/* Tabla */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 30px #D52B1EAA; /* sombra roja */
+}
+
+/* Encabezados */
+th {
+  background: #D52B1E; /* rojo bandera */
+  color: white;
+  padding: 16px 22px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  user-select: none;
+  border-right: 2px solid #FCD116;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+/* Celdas */
+td {
+  background-color: #007A33; /* verde bandera */
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 2px solid #FCD116;
+  color: #F5F5F5;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  word-wrap: break-word;
+}
+
+/* Filas pares */
+tbody tr:nth-child(even) td {
+  background-color: #005927; /* verde oscuro */
+}
+
+/* Hover en filas */
+tbody tr:hover td {
+  background-color: #FCD116;
+  color: #111;
+  cursor: default;
+}
+
+/* Imágenes */
+img {
+  max-width: 110px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 18px #FCD116AA;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #FCD116EE;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none; /* Ocultar encabezados */
+  }
+
+  tbody tr {
+    background-color: #007A33;
+    margin-bottom: 30px;
+    padding: 20px 18px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #D52B1EAA;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    text-align: right;
+    border-bottom: 1px solid #FCD116BB;
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #FCD116;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F5F5F5;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 0.85rem;
+    letter-spacing: 1.1px;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  img {
+    max-width: 90px;
+  }
+}

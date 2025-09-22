@@ -1,0 +1,179 @@
+/* --- Estilos generales --- */
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #004d25, #ffd700, #006b3f);
+    background-size: 400% 400%;
+    animation: fondoMov 12s ease infinite;
+    color: #222;
+}
+
+
+/* Animación de fondo */
+
+@keyframes fondoMov {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* --- Encabezado con bandera --- */
+
+header {
+    background: linear-gradient(to right, #002868, #ffffff, #bf0a30);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 6px solid #ffd700;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+header h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #ffd700;
+}
+
+
+/* --- Contenedor --- */
+
+.padre {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --- Tabla estilo Glassmorphism --- */
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Encabezados */
+
+thead {
+    background: rgba(0, 75, 35, 0.9);
+    color: #ffd700;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 1rem;
+    letter-spacing: 1px;
+}
+
+
+/* Celdas */
+
+tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    vertical-align: top;
+    color: #fff;
+}
+
+
+/* Filas alternas */
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Hover con efecto dorado */
+
+tbody tr:hover {
+    background: rgba(255, 215, 0, 0.3);
+    transform: scale(1.02);
+    transition: all 0.4s ease;
+}
+
+
+/* Texto destacado */
+
+td strong {
+    color: #ffd700;
+}
+
+
+/* Imágenes */
+
+td img {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #ffd700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+td img:hover {
+    transform: rotate(-3deg) scale(1.1);
+    border-color: #00ff88;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.08);
+    }
+    tbody td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #ffd700;
+    }
+}

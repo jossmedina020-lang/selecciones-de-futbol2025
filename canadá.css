@@ -1,0 +1,192 @@
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===== Fondo General ===== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url("Canadá/maple-bg.png") no-repeat center center fixed, linear-gradient(135deg, #ffffff, #f3f3f3);
+    background-size: cover;
+    padding: 20px;
+    color: #222;
+}
+
+
+/* ===== Encabezado ===== */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #d60000;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    font-size: 1.4rem;
+    color: #444;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+
+/* ===== Contenedor ===== */
+
+.padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===== Tabla ===== */
+
+table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeInUp 1s ease;
+}
+
+
+/* Encabezado */
+
+thead {
+    background: linear-gradient(135deg, #d60000, #ff3333);
+    color: #fff;
+}
+
+thead th {
+    padding: 16px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+thead th:last-child {
+    border-right: none;
+}
+
+
+/* Filas y celdas */
+
+td {
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.95rem;
+    vertical-align: middle;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Alternar colores */
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 0, 0, 0.04);
+}
+
+
+/* Hover en fila */
+
+tbody tr:hover {
+    background: rgba(214, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+
+
+/* ===== Imágenes jugadores ===== */
+
+img {
+    width: 120px;
+    height: auto;
+    border-radius: 14px;
+    border: 3px solid #d60000;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.2) rotate(-3deg);
+    border-color: #ff0000;
+    box-shadow: 0px 8px 22px rgba(214, 0, 0, 0.9);
+}
+
+
+/* ===== Animaciones ===== */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 14px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        animation: fadeInUp 0.8s ease;
+    }
+    td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #d60000;
+        margin-right: 12px;
+    }
+}

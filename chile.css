@@ -1,0 +1,162 @@
+/* =============================
+   ESTILOS GENERALES
+   ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 30px;
+  background: linear-gradient(135deg, #9b1b30, #1b2a52); /* Rojo y azul bandera Chile */
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* Contenedor principal */
+.padre {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #14253d; /* Azul oscuro */
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(155, 27, 48, 0.8);
+}
+
+/* =============================
+   ENCABEZADO
+   ============================= */
+header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+header h1 {
+  font-size: 3.3rem;
+  letter-spacing: 4px;
+  color: #d62c27; /* Rojo bandera Chile */
+  text-shadow: 0 0 12px #d62c2799;
+  font-weight: 900;
+  user-select: none;
+}
+
+/* =============================
+   TABLA
+   ============================= */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(214, 44, 39, 0.35);
+}
+
+/* Encabezados */
+th {
+  background: #d62c27; /* Rojo bandera */
+  color: #f5f5f5;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  user-select: none;
+}
+
+/* Celdas */
+td {
+  background-color: #1e2e54; /* Azul medianoche */
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 2px solid #d62c2755;
+  color: #e3e8f0;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Filas pares con fondo más oscuro */
+tbody tr:nth-child(even) td {
+  background-color: #2a3c72;
+}
+
+/* Hover fila */
+tbody tr:hover td {
+  background-color: #d62c2733;
+  cursor: default;
+}
+
+/* Imagenes */
+img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 0 15px #d62c2799;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px #ff3b31cc;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none; /* Ocultar encabezado */
+  }
+
+  tbody tr {
+    background-color: #1e2e54;
+    margin-bottom: 28px;
+    padding: 22px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #d62c2733;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+    text-align: right;
+    border-bottom: 1px solid #d62c2766;
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #d62c27;
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    font-size: 0.85rem;
+    letter-spacing: 1.1px;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  img {
+    max-width: 90px;
+  }
+}

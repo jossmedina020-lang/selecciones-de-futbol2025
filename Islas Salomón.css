@@ -1,0 +1,147 @@
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===== Fondo general ===== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #004080, #006400);
+    padding: 20px;
+    color: #fff;
+}
+
+
+/* ===== Encabezado ===== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #FFD700;
+    /* Amarillo bandera */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+header h2 {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+
+/* ===== Tabla ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+
+/* Encabezado tabla */
+
+thead {
+    background: linear-gradient(135deg, #FFD700, #00cc66);
+    color: #004080;
+}
+
+thead th {
+    padding: 14px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Filas */
+
+td {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Alternar colores */
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Hover en fila */
+
+tbody tr:hover {
+    background: rgba(0, 255, 150, 0.25);
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+
+/* ===== Imágenes jugadores ===== */
+
+img {
+    width: 110px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    border: 3px solid #FFD700;
+}
+
+img:hover {
+    transform: scale(1.15) rotate(-2deg);
+    box-shadow: 0px 6px 18px rgba(255, 215, 0, 0.8);
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+        padding: 15px;
+        transition: 0.3s;
+    }
+    td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #FFD700;
+        margin-right: 10px;
+    }
+}

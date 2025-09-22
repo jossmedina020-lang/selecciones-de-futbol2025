@@ -1,0 +1,101 @@
+/* Siria.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #d9e2ec);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #0052a5;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.padre {
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+thead tr {
+    background-color: #0071bc;
+    color: #fff;
+    text-align: left;
+}
+
+thead th {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+tbody tr:hover {
+    background-color: #e1f0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+tbody td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+tbody td img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    tbody td img {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,133 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff0f0;
+    /* tono suave rojo claro */
+    color: #333;
+    padding: 20px;
+}
+
+
+/* Encabezado */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #d70000;
+    /* rojo tunecino */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    color: #555;
+    font-size: 1.2em;
+}
+
+
+/* Contenedor de la tabla */
+
+.padre {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Tabla */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* Encabezado de tabla */
+
+thead {
+    background-color: #d70000;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+/* Filas de la tabla */
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #ffe5e5;
+}
+
+
+/* Celdas */
+
+tbody td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Imagen de portada */
+
+tbody td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d70000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+tbody td img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #d70000;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    tbody td img {
+        margin-left: 10px;
+    }
+}

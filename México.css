@@ -1,0 +1,207 @@
+/* ===== Estilos generales ===== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+
+/* ===== Encabezado ===== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 8px solid transparent;
+    border-image: linear-gradient(90deg, #006847, #ffffff, #ce1126) 1;
+    animation: border-glow 3s infinite alternate;
+}
+
+@keyframes border-glow {
+    from {
+        border-image: linear-gradient(90deg, #006847, #ffffff, #ce1126) 1;
+    }
+    to {
+        border-image: linear-gradient(90deg, #ce1126, #ffffff, #006847) 1;
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #006847;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+header h2 {
+    font-size: 1.4rem;
+    color: #ce1126;
+    font-weight: 500;
+}
+
+
+/* ===== Tabla ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Cabecera */
+
+thead {
+    background: linear-gradient(90deg, #006847, #ffffff, #ce1126);
+    color: #111;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Celdas */
+
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Alternar filas */
+
+tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+
+/* Hover en fila */
+
+tbody tr:hover {
+    background: #e6f5ec;
+    transform: scale(1.01);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== Imágenes ===== */
+
+img {
+    width: 120px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #006847;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.12) rotate(-2deg);
+    border-color: #ce1126;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+
+/* ===== Nombre con bandera ===== */
+
+td:first-child {
+    position: relative;
+    padding-left: 35px;
+    font-weight: bold;
+    color: #006847;
+}
+
+td:first-child::before {
+    content: "🇲🇽";
+    position: absolute;
+    left: 8px;
+    font-size: 1.2rem;
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 12px;
+    }
+    td {
+        text-align: left;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #006847;
+    }
+}

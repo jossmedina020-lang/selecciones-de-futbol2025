@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  margin: 0;
+  padding: 40px 20px;
+  color: #f0f4f8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.padre {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 40px 35px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  color: #ffcc00; /* Amarillo de la bandera */
+  text-shadow: 1px 1px 8px rgba(255, 204, 0, 0.7);
+}
+
+header h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #d0d7deaa;
+  letter-spacing: 1.5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+thead tr {
+  background: linear-gradient(90deg, #004aad, #0059c1);
+}
+
+th {
+  color: #ffe600;
+  font-weight: 600;
+  padding: 18px 20px;
+  font-size: 1.1rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  user-select: none;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+td {
+  color: #f0f4f8cc;
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+td strong {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+td img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 204, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+td img:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .padre {
+    padding: 25px 20px;
+  }
+
+  table, thead, tbody, tr, th, td {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tbody tr {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    padding: 20px;
+    transform: none !important;
+    cursor: default;
+  }
+
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+  }
+
+  tbody td::before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #ffd700;
+    content: attr(data-label);
+  }
+
+  td img {
+    max-width: 120px;
+    margin: 15px auto 0;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.8);
+    transform: none !important;
+  }
+
+  tbody tr:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transform: none !important;
+  }
+}

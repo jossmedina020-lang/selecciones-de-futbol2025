@@ -1,0 +1,273 @@
+/* 🌍 RESET GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #002b5c, #cf202e, #ffcc00);
+    background-size: 400% 400%;
+    animation: fondoAnim 20s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 🌈 Fondo animado */
+
+@keyframes fondoAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* 🏟️ HEADER */
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ffcc00;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffcc00;
+    margin-bottom: 12px;
+    animation: glowText 3s infinite alternate;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+
+/* ✨ Glow texto */
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px #ffcc00;
+    }
+    to {
+        text-shadow: 0 0 25px #ffcc00, 0 0 50px #cf202e;
+    }
+}
+
+
+/* ⚽ CONTENEDOR PRINCIPAL */
+
+.padre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    flex: 1;
+}
+
+
+/* 📌 CARD JUGADOR */
+
+.card {
+    position: relative;
+    border-radius: 20px;
+    padding: 3px;
+    /* espacio para el borde degradado */
+    background: linear-gradient(135deg, #ffcc00, #cf202e, #002b5c, #ffcc00);
+    background-size: 300% 300%;
+    animation: borderAnim 8s linear infinite;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Animación del borde */
+
+@keyframes borderAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Contenido interno */
+
+.card-inner {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 18px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+}
+
+.card:hover .card-inner {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Imagen jugador */
+
+.card img {
+    width: 100%;
+    height: 240px;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+
+
+/* Texto jugador */
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+.card .edad {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #eee;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+/* Badges (posición, rol, etc.) */
+
+.badge {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 6px 8px 14px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.25s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+.badge.red {
+    background: #cf202e;
+    color: #fff;
+}
+
+.badge.yellow {
+    background: #ffcc00;
+    color: #000;
+}
+
+.badge.blue {
+    background: #002b5c;
+    color: #fff;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+footer span {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+
+/* 🔄 Responsive */
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .padre {
+        padding: 20px;
+    }
+    .card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 40px 10px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    .card h3 {
+        font-size: 1.2rem;
+    }
+}

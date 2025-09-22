@@ -1,0 +1,124 @@
+/* Italia.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #008C45, #FFFFFF, #CD212A);
+    background-size: 400% 400%;
+    animation: gradientAnim 15s ease infinite;
+    color: #111;
+}
+
+@keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    border-bottom: 4px solid #008C45;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    margin-top: 0.5rem;
+}
+
+.padre {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.01);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+thead {
+    background: linear-gradient(90deg, #008C45, #FFFFFF, #CD212A);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+td img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #008C45;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+td img:hover {
+    transform: scale(1.15) rotate(-2deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}

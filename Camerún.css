@@ -1,0 +1,144 @@
+/* -------------------------------
+   Estilos generales
+-------------------------------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* -------------------------------
+   Encabezado
+-------------------------------- */
+
+header {
+    background: linear-gradient(90deg, #006b3c, #ff0000, #ffcd00);
+    /* Verde, rojo, amarillo */
+    color: #fff;
+    text-align: center;
+    padding: 30px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+
+/* -------------------------------
+   Contenedor principal
+-------------------------------- */
+
+.padre {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* -------------------------------
+   Tabla
+-------------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+thead {
+    background-color: #006b3c;
+    /* Verde de Camerún */
+    color: #fff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+th {
+    font-size: 1em;
+}
+
+tbody tr:hover {
+    background-color: #f0f9f0;
+    transition: 0.3s;
+}
+
+
+/* -------------------------------
+   Imágenes de jugadores
+-------------------------------- */
+
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #006b3c;
+}
+
+
+/* -------------------------------
+   Estilo de textos importantes
+-------------------------------- */
+
+td strong {
+    color: #006b3c;
+}
+
+
+/* -------------------------------
+   Responsividad
+-------------------------------- */
+
+@media screen and (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    td img {
+        display: block;
+        margin: 10px auto;
+    }
+}

@@ -1,0 +1,124 @@
+/* Inglaterra.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFFFFF, #E10600);
+    background-size: 300% 300%;
+    animation: fondoAnim 12s ease infinite;
+    color: #111;
+}
+
+@keyframes fondoAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-bottom: 5px solid #E10600;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    font-size: 1.3rem;
+    color: #222;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.padre {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    animation: aparecer 1.2s ease;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.01);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+thead {
+    background: linear-gradient(90deg, #E10600, #FFFFFF, #E10600);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+th,
+td {
+    padding: 1.3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+td img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #E10600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+td img:hover {
+    transform: scale(1.2) rotate(-3deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}

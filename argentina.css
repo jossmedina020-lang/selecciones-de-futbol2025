@@ -1,0 +1,159 @@
+/* =============================
+   ESTILOS GENERALES
+   ============================= */
+
+body {
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+  margin: 30px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fondo degradado azul oscuro */
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+/* Contenedor centralizado y con sombra */
+.padre {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #121d3a; /* Azul muy oscuro */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* =============================
+   ENCABEZADO
+   ============================= */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #00d8ff; /* Cyan brillante */
+  text-shadow: 0 0 10px #00d8ffaa;
+  font-weight: 900;
+  user-select: none;
+}
+
+/* =============================
+   TABLA
+   ============================= */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 216, 255, 0.3);
+}
+
+/* Encabezados con fondo cyan con sombra */
+th {
+  background: #00d8ff;
+  color: #121d3a;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  user-select: none;
+}
+
+/* Celdas */
+td {
+  background-color: #192a56; /* Azul medianoche */
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 2px solid #00d8ff55;
+  color: #d0e6f7;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Alterna color en filas pares para mejor lectura */
+tbody tr:nth-child(even) td {
+  background-color: #1e365f; /* Azul más claro */
+}
+
+/* Hover fila */
+tbody tr:hover td {
+  background-color: #00d8ff33;
+  cursor: default;
+}
+
+/* Imagenes centradas y con borde brillante */
+img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00d8ff88;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #00f0ffcc;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none; /* Ocultamos encabezado para diseño móvil */
+  }
+
+  tbody tr {
+    background-color: #192a56;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00d8ff44;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #00d8ff88;
+    position: relative;
+    font-weight: 600;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #00d8ff;
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  img {
+    max-width: 90px;
+  }
+}

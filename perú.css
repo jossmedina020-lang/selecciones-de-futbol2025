@@ -1,0 +1,163 @@
+/* peru.css - Estilo ultra piola y moderno */
+
+/* Fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    background: linear-gradient(135deg, #ff003c, #ffe600);
+    color: #222;
+}
+
+/* Header súper destacado */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+/* Tabla con bordes redondeados y sombra neón */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    background: #1c1c1ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff003c, 0 0 40px #ffe600;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Encabezados con efecto neón amarillo */
+th {
+    background: linear-gradient(90deg, #ff003c, #ffe600);
+    color: #1c1c1c;
+    padding: 20px 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ff003c;
+    user-select: none;
+}
+
+/* Celdas con padding amplio y sombra sutil */
+td {
+    padding: 18px 22px;
+    border-bottom: 1px solid #333;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+/* Alternar filas con degradado oscuro */
+tbody tr:nth-child(odd) {
+    background: linear-gradient(90deg, #2a2a2a, #3e3e3e);
+    transition: background 0.4s ease;
+}
+
+/* Filas pares más oscuras */
+tbody tr:nth-child(even) {
+    background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+    transition: background 0.4s ease;
+}
+
+/* Hover con glow y leve escala */
+tbody tr:hover {
+    background: linear-gradient(90deg, #ff003c, #ffe600);
+    color: #1c1c1c;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #ff003c, 0 0 25px #ffe600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Imágenes con sombra neón, borde redondeado y efecto pulsante */
+img {
+    max-width: 110px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #ff003c, 0 0 20px #ffe600;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Efecto zoom y glow al pasar mouse en la imagen */
+img:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 0 25px #ff003c, 0 0 45px #ffe600;
+}
+
+/* Biografía en cursiva, tono más claro para contraste */
+td:nth-child(4) {
+    font-style: italic;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Centramos posición y edad y resaltamos */
+td:nth-child(2), td:nth-child(3) {
+    text-align: center;
+    font-weight: 700;
+    color: #ffe600;
+    text-shadow: 1px 1px 4px #ff003c;
+}
+
+/* Responsividad: tarjetas verticales con animación */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead tr {
+        display: none;
+    }
+    tbody tr {
+        background: #1c1c1ccc;
+        margin-bottom: 30px;
+        padding: 25px;
+        border-radius: 30px;
+        box-shadow: 0 0 30px #ff003c, 0 0 50px #ffe600;
+        transform-origin: center;
+        transition: transform 0.35s ease;
+    }
+    tbody tr:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px #ff003c, 0 0 80px #ffe600;
+    }
+    tbody td {
+        padding-left: 55%;
+        position: relative;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #333;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-weight: 700;
+        color: #ff003c;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 0.95rem;
+        user-select: none;
+    }
+    img {
+        max-width: 120px;
+        margin: 15px auto;
+        box-shadow: 0 0 20px #ff003c, 0 0 40px #ffe600;
+        border-radius: 30px;
+    }
+}

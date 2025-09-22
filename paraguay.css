@@ -1,0 +1,60 @@
+body {
+  background-color: #121212; /* fondo oscuro */
+  color: #ffffff; /* texto blanco para máximo contraste */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+header h1, header h2 {
+  color: #00ff00; /* verde brillante */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* sombra para resaltar */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #222; /* fondo un poco más claro para la tabla */
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #444;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #008000; /* verde Paraguay */
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+tbody tr:hover {
+  background-color: #3a3a3a;
+}
+
+td img {
+  max-width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #00ff00;
+  display: block;
+  margin: auto;
+}
+
+strong {
+  color: #00ff00;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
